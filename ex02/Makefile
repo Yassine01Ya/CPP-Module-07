@@ -1,4 +1,4 @@
-SOURCE =  main.cpp iter.cpp
+SOURCE =  main.cpp Array.cpp
 
 OBJECT = $(SOURCE:.cpp=.o)
 

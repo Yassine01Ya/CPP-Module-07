@@ -36,3 +36,23 @@ Array<T> &Array<T>::operator=(const Array<T> &arr)
         buff[i] = arr.buff[i];
     return *this;
 }
+
+template <class T>
+Array<T>::~Array()
+{
+    delete[] buff;
+}
+
+template <class T>
+size_t Array<T>::size() const
+{
+    return count;
+}
+
+template <class T>
+T &Array<T>::operator[](unsigned int index)
+{
+    if (index > count)
+        throw Array<T>::IndexOutOfBoundException();
+    return buff[index];
+}
